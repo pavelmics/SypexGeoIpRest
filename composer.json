@@ -1,0 +1,20 @@
+{
+    "name": "pavel-ms/SypixGeoIpRestClient",
+    "description": "It is simple wrapper for SypixGeoIP REST service",
+	"authors": [
+        {
+            "name": "Mikushin Pavel",
+            "email": "pavelmics@gmail.com",
+            "homepage": "https://github.com/pavel-ms"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "guzzlehttp/guzzle": "~5.0"
+    },
+	"autoload": {
+        "psr-4": {
+            "pavel-ms\\SypexGeoIpRest\\": "src/"
+        }
+    } 
+}
