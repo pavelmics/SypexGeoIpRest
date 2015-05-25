@@ -1,11 +1,13 @@
 {
-    "name": "pavel-ms/sypix-geo-ip-rest",
+    "name": "pavelmics/sypix-geo-ip-rest",
     "description": "It is simple wrapper for SypixGeoIP REST service",
+    "homepage": "https://github.com/pavelmics/SypexGeoIpRest",
+    "license": "MIT",
 	"authors": [
         {
             "name": "Mikushin Pavel",
             "email": "pavelmics@gmail.com",
-            "homepage": "https://github.com/pavel-ms"
+            "homepage": "https://github.com/pavelmics"
         }
     ],
     "require": {
@@ -14,7 +16,7 @@
     },
 	"autoload": {
         "psr-4": {
-            "pavel-ms\\SypexGeoIpRest\\": "src/"
+            "pavelmics\\SypexGeoIp\\": "src/"
         }
     } 
 }

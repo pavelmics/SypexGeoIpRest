@@ -1,11 +1,14 @@
 <?php
 
+namespace pavelmics\SypexGeoIp;
+
 /**
- * Class SypixGeoRest
+ * Class RestClient
+ * It is simply REST API client for sypex geo ip service
  *
  * @link https://sypexgeo.net/ru/api/
  */
-class SypixGeoRest
+class RestClient
 {
 	/**
 	 * Sypex JSON API url
@@ -21,7 +24,7 @@ class SypixGeoRest
 	protected $_apiKey = null;
 
 	/**
-	 * @var \Guzzle\Http\Client
+	 * @var \GuzzleHttp\Client
 	 */
 	protected $_client;
 
@@ -37,7 +40,8 @@ class SypixGeoRest
 	 */
 	public function __construct(array $params = [])
 	{
-		$this->_client = new GuzzleHttp\Client();
+		$this->_client = new \GuzzleHttp\Client();
+
 		isset($params['key'])
 			? $this->_apiKey = $params['key']
 			: null;
@@ -83,7 +87,7 @@ class SypixGeoRest
 	{
 		try {
 			$result = $this->_client->get($url);
-		} catch (GuzzleHttp\Exception\TransferException $e) {
+		} catch (\GuzzleHttp\Exception\TransferException $e) {
 			$result = false;
 			$this->lastError = [
 				'errorType' => 'http_client_error',
