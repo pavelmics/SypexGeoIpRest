@@ -1,5 +1,5 @@
 {
-    "name": "pavel-ms/SypixGeoIpRestClient",
+    "name": "pavel-ms/sypix-geo-ip-rest",
     "description": "It is simple wrapper for SypixGeoIP REST service",
 	"authors": [
         {
