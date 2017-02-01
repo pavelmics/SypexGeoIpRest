@@ -85,7 +85,8 @@ class RestClient
 	protected function _req($url)
 	{
 		try {
-			$result = $this->_client->get($url);
+			$response = $this->_client->get($url);
+            $result = $response->getBody();
 		} catch (\GuzzleHttp\Exception\TransferException $e) {
 			$result = false;
 			$this->lastError = [
@@ -94,6 +95,6 @@ class RestClient
 			];
 		}
 
-		return $result->getBody();
+		return $result;
 	}
 }
